@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Health Tracker</title>
+
+    <!-- Meta -->
+    <meta
+      name="description"
+      content="Chronic Disease & Mental Health Tracker"
+    />
+    <meta
+      property="og:title"
+      content="Chronic Disease & Mental Health Tracker"
+    />
+    <meta
+      property="og:description"
+      content="Chronic Disease & Mental Health Tracker"
+    />
+    <meta property="og:type" content="Health Tracker" />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" />
+
+    <!-- *************
+		************ CSS Files *************
+	  ************* -->
+    <link rel="stylesheet" href="assets/fonts/remix/remixicon.css" />
+    <!-- Bootstrap Core CSS (for layout & sizing) -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="./assets/css/main.min.css" />
+
+    <!-- *************
+		************ Vendor Css Files *************
+	  ************ -->
+
+    <!-- Scrollbar CSS -->
+    <link
+      rel="stylesheet"
+      href="assets/vendor/overlay-scroll/OverlayScrollbars.min.css"
+    />
+
+    <!-- Date Range CSS -->
+    <link rel="stylesheet" href="assets/vendor/daterange/daterange.css" />
+
+    <!-- Data Tables -->
+    <link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5.css" />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/datatables/dataTables.bs5-custom.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendor/datatables/buttons/dataTables.bs5-custom.css"
+    />
+  </head>
+
+  <body>
+    <!-- Loading starts -->
+    <!-- <div id="loading-wrapper">
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="spin-wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div> -->
+    <!-- Loading ends -->
+
+    <!-- Page wrapper starts -->
+    <div class="page-wrapper">
+      <!-- Main container starts -->
+      <div class="main-container">
+        <!-- Sidebar wrapper starts -->
+        <nav id="sidebar" class="sidebar-wrapper">
+          <!-- Brand container starts -->
+          <div
+            class="brand-container d-flex align-items-center justify-content-between"
+          >
+            <!-- App brand starts -->
+            <div class="app-brand ms-3">
+              <a href="./index.html">
+                <img
+                  src="./assets/images/AYUSHDHAM__7_-removebg-preview.png"
+                  class="logo"
+                  alt="Health Tracker Logo"
+                  width="200"
+                  height="60"
+                />
+              </a>
+            </div>
+            <!-- App brand ends -->
+
+            <!-- Pin sidebar starts -->
+            <button type="button" class="pin-sidebar me-3">
+              <i class="ri-menu-line"></i>
+            </button>
+            <!-- Pin sidebar ends -->
+          </div>
+          <!-- Brand container ends -->
+
+          <!-- Sidebar profile starts -->
+          <div class="sidebar-profile">
+            <img
+              src="assets/images/Profilelogo.png"
+              class="rounded-5"
+              alt="Profile Image"
+            />
+            <h6
+              class="mb-1 profile-name text-nowrap text-truncate text-primary"
+            >
+              Admin
+            </h6>
+            <small class="profile-name text-nowrap text-truncate"
+              >Department Admin</small
+            >
+          </div>
+          <!-- Sidebar profile ends -->
+
+          <!-- Sidebar menu starts -->
+          <div class="sidebarMenuScroll">
+            <ul class="sidebar-menu">
+              <li class="active current-page">
+                <a href="./index.html">
+                  <i class="ri-home-6-line"></i>
+                  <span class="menu-text">Hospital Admin</span>
+                </a>
+              </li>
+             
+              <li>
+                <a href="./medicaldashboard.html">
+                  <i class="ri-home-smile-2-line"></i>
+                  <span class="menu-text">Medical Dashboard</span>
+                </a>
+              </li>
+               <li>
+                <a href="./clinicaldashboard.html">
+                  <i class="ri-home-5-line"></i>
+                  <span class="menu-text">Clinic Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="./appointments.html">
+                  <i class="ri-calendar-2-line"></i>
+                  <span class="menu-text">Appointments</span>
+                </a>
+              </li>
+              <li>
+                <a href="./mypatients.html">
+                  <i class="ri-empathize-line"></i>
+                  <span class="menu-text">My Patients</span>
+                </a>
+              </li>
+              <li>
+                <a href="./patientdashboard.html">
+                  <i class="ri-empathize-line"></i>
+                  <span class="menu-text">Patient Profile</span>
+                </a>
+              </li>
+              <li>
+                <a href="./progresstracking.html">
+                  <i class="ri-bar-chart-line"></i>
+                  <span class="menu-text">Progress tracking</span>
+                </a>
+              </li>
+              <li>
+                <a href="./doctorcard.html">
+                  <i class="ri-stethoscope-line"></i>
+                  <span class="menu-text">Doctors Cards</span>
+                </a>
+              </li>
+             
+              <li>
+                <a href="./patientslist.html">
+                  <i class="ri-heart-pulse-line"></i>
+                  <span class="menu-text">Patients List</span>
+                </a>
+              </li>
+              <li>
+                <a href="./addpatient.html">
+                  <i class="ri-heart-pulse-line"></i>
+                  <span class="menu-text">Add Patient</span>
+                </a>
+              </li>
+             
+               <li class="treeview">
+                <a href="#!">
+                  <i class="ri-building-2-line"></i>
+                  <span class="menu-text">Departments</span>
+                </a>
+                <ul class="treeview-menu">
+                  <li>
+                    <a href="./departmentslist.html">Departments List</a>
+                  </li>
+                  
+                </ul>
+              </li>
+              
+          </div>
+          <!-- Sidebar menu ends -->
+
+          <!-- Sidebar contact starts -->
+          <div class="sidebar-contact">
+            <h5 class="mb-1 lh-1 text-nowrap text-truncate">+91-9999999999</h5>
+            <p class="fw-light m-0 text-nowrap text-truncate">
+              Customer Support
+            </p>
+            <i class="ri-cellphone-line"></i>
+          </div>
+          <!-- Sidebar contact ends -->
+        </nav>
+        <!-- Sidebar wrapper ends -->
+
+        <!-- App container starts -->
+        <div class="app-container">
+          <!-- App header starts -->
+          <div class="app-header d-flex align-items-center">
+            <!-- Brand container sm starts -->
+            <div class="brand-container-sm d-xl-none d-flex align-items-center">
+              <!-- App brand starts -->
+              <div class="app-brand">
+                <a href="index.html">
+                  <img
+                    src="assets/images/logo.svg"
+                    class="logo"
+                    alt="Medicare Admin Template"
+                  />
+                </a>
+              </div>
+              <!-- App brand ends -->
+
+              <!-- Toggle sidebar starts -->
+              <button type="button" class="toggle-sidebar">
+                <i class="ri-menu-line"></i>
+              </button>
+              <!-- Toggle sidebar ends -->
+            </div>
+            <!-- Brand container sm ends -->
+
+            <!-- Search container starts -->
+            <div class="search-container d-xl-block d-none">
+              <input
+                type="text"
+                class="form-control"
+                id="searchId"
+                placeholder="Search"
+              />
+              <i class="ri-search-line"></i>
+            </div>
+            <!-- Search container ends -->
+
+            <!-- App header actions starts -->
+            <div class="header-actions">
+              <!-- Header actions starts -->
+              
+              <!-- Header actions ends -->
+
+              <!-- Header user settings starts -->
+              <div class="dropdown ms-3">
+                <a
+                  id="userSettings"
+                  class="dropdown-toggle d-flex align-items-center"
+                  href="#!"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <div class="avatar-box">
+                    <img
+                      src="assets/images/Profilelogo.png"
+                      class="img-2xx rounded-5"
+                      alt="Profile Image"
+                    />
+                    <span class="status busy"></span>
+                  </div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end shadow-lg">
+                  <div class="px-3 py-2">
+                    <span class="small">Admin</span>
+                    <h6 class="m-0">Admin</h6>
+                  </div>
+                  <div class="mx-3 my-2 d-grid">
+                    <a href="login.html" class="btn btn-danger">Logout</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Header user settings ends -->
+            </div>
+            <!-- App header actions ends -->
+          </div>
+          <!-- App header ends -->
+
+          <!-- App hero header starts -->
+           
+          <div class="app-hero-header d-flex align-items-center">
+            <!-- Breadcrumb starts -->
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="./index.html">
+                  <i class="ri-home-3-line"></i>
+                </a>
+              </li>
+              <li class="breadcrumb text-primary" aria-current="page" >
+                Hospital Dashboard
+              </li>
+            </ol>
+            <!-- Breadcrumb ends -->
+
+            <!-- Sales stats starts -->
+            <div class="ms-auto d-lg-flex d-none flex-row">
+              <div class="input-group">
+                <span class="input-group-text bg-primary-lighten">
+                  <i class="ri-calendar-2-line text-primary"></i>
+                </span>
+                <input
+                  type="text"
+                  id="abc"
+                  class="form-control custom-daterange"
+                />
+              </div>
+            </div>
+            <!-- Sales stats ends -->
+          </div>
+           <!-- Hero Section -->
+            <div class="hero-section" 
+     style="
+        background: linear-gradient(rgba(44, 110, 73, 0.8), rgba(76, 149, 108, 0.8)), url('https://www.lordsayurveda.com/wp-content/uploads/2024/08/blog_tradition-1.webp');
+        background-size: cover;
+        width: 100%;
+        background-position: center;
+        border-radius: 20px;
+        padding: 3rem;
+        margin-bottom: 2.5rem;
+        color: var(--light-color);
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+     ">
+  <h1>Welcome to Ayushdham</h1>
+  <p><b>Your comprehensive Panchakarma patient management and therapy scheduling solution</b></p>
+</div>
+
+          <!-- App Hero header ends -->
+          <!-- App body starts -->
+          <div class="app-body">
+            <!-- Row starts -->
+            <div class="row gx-3">
+              <div class="col-xxl-9 col-sm-12">
+                <!-- Row starts -->
+                <div class="row gx-3">
+                  <div class="col-sm-4 col-12">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="p-2 border border-primary rounded-circle me-3"
+                          >
+                            <div
+                              class="icon-box md bg-primary-lighten rounded-5"
+                            >
+                              <i
+                                class="ri-surgical-mask-line fs-4 text-primary"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <h1 class="lh-1">380</h1>
+                            <p class="m-0">Patients</p>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex align-items-end justify-content-between mt-1"
+                        >
+                          <a class="text-primary" href="javascript:void(0);">
+                            <span>View All</span>
+                            <i
+                              class="ri-arrow-right-line text-primary ms-1"
+                            ></i>
+                          </a>
+                          <div class="text-end">
+                            <p class="mb-0 text-primary">+40%</p>
+                            <span
+                              class="badge bg-primary-light text-primary small"
+                              >this month</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-4 col-12">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="p-2 border border-primary rounded-circle me-3"
+                          >
+                            <div
+                              class="icon-box md bg-primary-lighten rounded-5"
+                            >
+                              <i class="bi bi-calendar-check text-primary fs-4"></i>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <h1 class="lh-1">60</h1>
+                            <p class="m-0">Appointments</p>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex align-items-end justify-content-between mt-1"
+                        >
+                          <a class="text-primary" href="javascript:void(0);">
+                            <span>View All</span>
+                            <i class="ri-arrow-right-line ms-1"></i>
+                          </a>
+                          <div class="text-end">
+                            <p class="mb-0 text-primary">+30%</p>
+                            <span
+                              class="badge bg-primary-light text-primary small"
+                              >this month</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                   <div class="col-sm-4 col-12">
+                    <div class="card mb-3">
+                      <div class="card-body">
+                        <div class="d-flex align-items-center">
+                          <div
+                            class="p-2 border border-primary rounded-circle me-3"
+                          >
+                            <div
+                              class="icon-box md bg-primary-lighten rounded-5"
+                            >
+                              <i
+                                class="ri-hand-heart-line fs-4 text-primary"
+                              ></i>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column">
+                            <h1 class="lh-1">142</h1>
+                            <p class="m-0">Therapies Completed</p>
+                          </div>
+                        </div>
+                        <div
+                          class="d-flex align-items-end justify-content-between mt-1"
+                        >
+                          <a class="text-primary" href="javascript:void(0);">
+                            <span>View All</span>
+                            <i class="ri-arrow-right-line ms-1"></i>
+                          </a>
+                          <div class="text-end">
+                            <p class="mb-0 text-primary">+10%</p>
+                            <span
+                              class="badge bg-primary-light text-primary small"
+                              >this month</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Row ends -->
+                <!-- Row starts -->
+                <div class="row gx-3">
+                  <div class="col-xxl-12 col-sm-12">
+                    <div class="card mb-3">
+                      <div class="card-header">
+                        <h5 class="card-title">Departments</h5>
+                      </div>
+                      <div class="card-body pt-0">
+                        <!-- Row starts -->
+                        <div class="row g-3">
+                          <div class="col-sm col-6">
+                            <div class="card border rounded-5">
+                              <div class="card-body">
+                                <div
+                                  class="d-flex flex-column align-items-center"
+                                >
+                                  <img
+                                    src="./assets/images/general_medicine.svg"
+                                    class="img-3x mb-4"
+                                    alt="Medical Admin"
+                                  />
+                                  <h6>Kāyachikitsā</h6>
+                                  <h7>(GENERAL MEDICINE)</h7>
+                                  <h2 class="text-primary m-0">9</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm col-6">
+                            <div class="card border rounded-5">
+                              <div class="card-body">
+                                <div
+                                  class="d-flex flex-column align-items-center"
+                                >
+                                  <img
+                                    src="./assets/images/products/opthamology.png"
+                                    class="img-3x mb-4"
+                                    alt="Hoapital Admin"
+                                  />
+                                  <h6>Shālākya Tantra</h6>
+                                  <h7>(ENT & EYE)</h7>
+                                  <h2 class="text-primary m-0">5</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm col-6">
+                            <div class="card border rounded-5">
+                              <div class="card-body">
+                                <div
+                                  class="d-flex flex-column align-items-center"
+                                >
+                                  <img
+                                    src="./assets/images/products/women.png"
+                                    class="img-3x mb-4"
+                                    alt="Hospital Dashboard"
+                                  />
+                                  <h6>Strīroga & Prasūti Tantra</h6>
+                                  <h7>(WOMEN'S HEALTH)</h7>
+                                  <h2 class="text-primary m-0">6</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm col-6">
+                            <div class="card border rounded-5">
+                              <div class="card-body">
+                                <div
+                                  class="d-flex flex-column align-items-center"
+                                >
+                                  <img
+                                    src="assets/images/images__1_-removebg-preview.png"
+                                    class="img-3x mb-4"
+                                    alt="Medical Dashboard"
+                                  />
+                                  <h6>Pañchakarma Chikitsā</h6>
+                                  <h8>(AYURVEDIC DETOXIFICATION)</h8>
+                                  <h2 class="text-primary m-0">12</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm col-6">
+                            <div class="card border rounded-5">
+                              <div class="card-body">
+                                <div
+                                  class="d-flex flex-column align-items-center"
+                                >
+                                  <img
+                                    src="assets/images/images (1).jpeg"
+                                    class="img-3x mb-4"
+                                    alt="Hospital Dashboard"
+                                  />
+                                  <h6>Śalya Tantra</h6>
+                                  <h7>(SURGERY)</h7>
+                                  <h2 class="text-primary m-0">5</h2>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Row ends -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Row ends -->
+              </div>
+              
+              <div class="col-xxl-3 col-sm-12">
+                <div class="card mb-3 display-card">
+                  <div class="card-body">
+                    <div class="d-flex flex-column align-items-center m-auto">
+                      <div class="display-card-body m-4">
+                        <img
+                          src="./assets/images/chiropractic-physiotherapy-svgrepo-com.svg"
+                          class="img-fluid"
+                          alt="Doctor Dashboard"
+                          style="max-height: 400px; width: 370px;"
+                        />
+                        <!-- <span class="dot-circle one"></span> 
+                        <span class="dot-circle two"></span>
+                        <<span class="dot-circle three"></span>
+                        <span class="dot-circle four"></span>
+                         <span class="dot-circle five"></span> -->
+                      </div>
+                      <div class="d-flex gap-2">
+                        <div class="icon-box border rounded-5">
+                          <div class="text-center p-1">
+                            <h6 class="text-body small mt-2 mb-0">Vata</h6>
+                            <div id="sparkline1"  style="height: 50px;"></div>
+                          </div>
+                        </div>
+                        <div class="icon-box border rounded-5">
+                          <div class="text-center p-1">
+                            <h6 class="text-body small mt-2 mb-0">Pitta</h6>
+                            <div id="sparkline2"  style="height: 50px;"></div>
+                          </div>
+                        </div>
+                        <div class="icon-box border rounded-5">
+                          <div class="text-center p-1">
+                            <h6 class="text-body small mt-2 mb-0">Kapha</h6>
+                            <div id="sparkline3"  style="height: 50px;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Patients by Age Section -->
+<div class="card mt-4">
+  <div class="card-body">
+    <h6 class="card-title"><b>Patients by Age</b></h6>
+    <canvas id="patientsByAgeChart" style="width:100%; height:350px;"></canvas>
+  </div>
+</div>
+
+<!-- Chart.js Script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('patientsByAgeChart');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+               'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      datasets: [
+        {
+          label: '0-5',
+          data: [5, 6, 8, 9, 10, 12, 13, 15, 14, 16, 17, 18],
+          backgroundColor: '#4da6a6'
+        },
+        {
+          label: '6-15',
+          data: [6, 7, 9, 10, 12, 13, 15, 16, 15, 17, 18, 19],
+          backgroundColor: '#66b2b2'
+        },
+        {
+          label: '16-25',
+          data: [7, 8, 10, 11, 13, 14, 16, 17, 16, 18, 19, 20],
+          backgroundColor: '#80bfbf'
+        },
+        {
+          label: '26-45',
+          data: [8, 9, 11, 12, 14, 15, 17, 18, 17, 19, 20, 21],
+          backgroundColor: '#99cccc'
+        },
+        {
+          label: '46+',
+          data: [9, 10, 12, 13, 15, 16, 18, 19, 18, 20, 21, 22],
+          backgroundColor: '#b3d9d9'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom'
+        }
+      },
+      scales: {
+        x: {
+          stacked: false
+        },
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+            <!-- Row ends -->
+
+            
+          </div>
+          <!-- App body ends -->
+
+          <!-- App footer starts -->
+          <div class="app-footer">
+            <span>© Health Tracker 2025</span>
+          </div>
+          <!-- App footer ends -->
+        </div>
+        <!-- App container ends -->
+      </div>
+      <!-- Main container ends -->
+    </div>
+    <!-- Page wrapper ends -->
+
+    <!-- *************
+			************ JavaScript Files *************
+		************* -->
+    <!-- Required jQuery first, then Bootstrap Bundle JS -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+
+    <!-- *************
+			************ Vendor Js Files *************
+		************* -->
+
+    <!-- Overlay Scroll JS -->
+    <script src="assets/vendor/overlay-scroll/jquery.overlayScrollbars.min.js"></script>
+    <script src="assets/vendor/overlay-scroll/custom-scrollbar.js"></script>
+
+    <!-- Date Range JS -->
+    <script src="assets/vendor/daterange/daterange.js"></script>
+    <script src="assets/vendor/daterange/custom-daterange.js"></script>
+
+    <!-- Apex Charts -->
+    <script src="assets/vendor/apex/apexcharts.min.js"></script>
+    <script src="assets/vendor/apex/custom/home/patients.js"></script>
+    <script src="assets/vendor/apex/custom/home/department-income.js"></script>
+    <script src="assets/vendor/apex/custom/home/patients-age.js"></script>
+    <script src="assets/vendor/apex/custom/home/sparklines.js"></script>
+
+    <!-- Data Tables -->
+    <script src="assets/vendor/datatables/dataTables.min.js"></script>
+    <script src="assets/vendor/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="assets/vendor/datatables/custom/custom-datatables.js"></script>
+
+    <!-- Custom JS files -->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>
