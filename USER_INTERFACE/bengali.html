@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>অ্যাপয়েন্টমেন্ট ও ডাক্তার - আয়ুর্বেদিক চিকিৎসা কেন্দ্র</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css_file/bengali.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <img src="https://images.unsplash.com/photo-1620916566398-39f1686d3f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" class="logo">
+        <h2>আয়ুর্বেদিক কেয়ার</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> লগআউট</a></li>
+        <li><a href="./appointment_page.html"><i class="fas fa-calendar-check"></i> অ্যাপয়েন্টমেন্ট</a></li>
+        <li><a href="./index.html"><i class="fas fa-tachometer-alt"></i> ড্যাশবোর্ড</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="top-banner">
+        <h1>অ্যাপয়েন্টমেন্ট বুক করুন</h1>
+        <div class="user-info">
+          <i class="fas fa-user-circle"></i>
+          <span id="username-display">নতুন ব্যবহারকারী</span>
+        </div>
+      </div>
+
+      <!-- Appointment Form -->
+      <div class="appointment-form-section">
+        <h2 class="section-title">আপনার অ্যাপয়েন্টমেন্ট নির্ধারণ করুন</h2>
+        <form>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">পূর্ণ নাম</label>
+              <input type="text" id="fullName" placeholder="আপনার নাম লিখুন">
+            </div>
+            <div class="form-group">
+              <label for="email">ইমেল</label>
+              <input type="email" id="email" placeholder="আপনার ইমেল লিখুন">
+            </div>
+            <div class="form-group">
+              <label for="phone">ফোন নম্বর</label>
+              <input type="tel" id="phone" placeholder="আপনার ফোন নম্বর লিখুন">
+            </div>
+            <div class="form-group">
+              <label for="department">বিভাগ</label>
+              <select id="department">
+                <option>বিভাগ নির্বাচন করুন</option>
+                <option>কায়চিকিৎসা</option>
+                <option>শালাক্য তন্ত্র</option>
+                <option>শল্য তন্ত্র</option>
+                <option>অগদ তন্ত্র</option>
+                <option>কৌমারভৃত্য</option>
+                <option>প্রসূতি তন্ত্র</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="doctor">ডাক্তার নির্বাচন করুন</label>
+              <select id="doctor">
+                <option>ডাক্তার নির্বাচন করুন</option>
+                <option>ডাঃ অনন্যা শর্মা</option>
+                <option>ডাঃ রাজেশ প্যাটেল</option>
+                <option>ডাঃ প্রিয়া মেনন</option>
+                <option>ডাঃ বিক্রম সিং</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="date">তারিখ</label>
+              <input type="date" id="date">
+            </div>
+            <div class="form-group">
+              <label for="time">সময়</label>
+              <input type="time" id="time">
+            </div>
+            <div class="form-group">
+              <label for="appointmentType">অ্যাপয়েন্টমেন্ট টাইপ</label>
+              <select id="appointmentType">
+                <option>নির্বাচন করুন</option>
+                <option>পরামর্শ</option>
+                <option>ফলো-আপ</option>
+                <option>থেরাপি সেশন</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label for="symptoms">লক্ষণ বর্ণনা করুন (ঐচ্ছিক)</label>
+              <textarea id="symptoms" placeholder="আপনার সমস্যার সংক্ষিপ্ত বিবরণ দিন"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="submit-btn">অ্যাপয়েন্টমেন্ট বুক করুন</button>
+        </form>
+      </div>
+
+      <!-- Doctors Section -->
+      <div class="doctors-section">
+        <h2 class="section-title">আমাদের আয়ুর্বেদিক বিশেষজ্ঞরা</h2>
+        <div class="doctors-grid">
+          <div class="doctor-card">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413fbb598ae" class="doctor-image">
+            <div class="doctor-info">
+              <div class="doctor-name">ডাঃ অনন্যা শর্মা</div>
+              <div class="doctor-specialty">কায়চিকিৎসা বিশেষজ্ঞ</div>
+              <button class="book-appointment-btn">বুক করুন</button>
+            </div>
+          </div>
+          <div class="doctor-card">
+            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6034d" class="doctor-image">
+            <div class="doctor-info">
+              <div class="doctor-name">ডাঃ রাজেশ প্যাটেল</div>
+              <div class="doctor-specialty">শল্য তন্ত্র বিশেষজ্ঞ</div>
+              <button class="book-appointment-btn">বুক করুন</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+:root {
+      --primary-color: #d9f0d0;
+      --secondary-color: #95d5b2;
+      --accent-color: #52b788;
+      --text-color: #1b4332;
+      --card-color: #f1faee;
+      --hover-color: #40916c;
+    }
+
+    body {
+      background-color: var(--primary-color);
+      font-family: Arial, sans-serif;
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .language-container {
+      background: var(--card-color);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .lang-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      background: var(--secondary-color);
+      color: var(--text-color);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .lang-btn:hover {
+      background: var(--hover-color);
+      color: white;
+    }

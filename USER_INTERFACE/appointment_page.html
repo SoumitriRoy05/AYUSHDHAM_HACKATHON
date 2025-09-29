@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <style>
+       
+    </style>
+    <link rel="stylesheet" href="./css_file/appointment_page.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h2>Ayurvedic Care</h2>
+    <a href="./welcome.html">Dashboard</a>
+    <a href="./appointment_page.html">Appointments</a>
+    <a href="./treatment.html">Treatments</a>
+    <a href="./pharmacy.html">Pharmacy</a>
+    <a href="./report.html">Reports</a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+    <!-- Header Section -->
+    <div class="header-box">
+        <h1>Book an Appointment</h1>
+        <p>Schedule your wellness journey with our experts</p>
+    </div>
+
+    <!-- Appointment Form -->
+    <div class="form-card">
+        <form>
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name">
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter your phone number">
+
+            <label>Department</label>
+            <select>
+                <option>Select Department</option>
+           
+            <option value="general">General Consultation</option>
+  <option value="panchakarma">Panchakarma Therapy</option>
+  <option value="kayachikitsa">Kayachikitsa (Internal Medicine)</option>
+  <option value="shalya">Shalya Tantra (Surgery)</option>
+  <option value="shalakya">Shalakya Tantra (ENT & Eye)</option>
+  <option value="prasuti">Prasuti & Stri Roga (Gynecology & Obstetrics)</option>
+  <option value="balroga">Bal Roga (Pediatrics)</option>
+  <option value="rasayana">Rasayana (Rejuvenation)</option>
+ </select>
+            <label>Select Doctor</label>
+            <select>
+                <option>Select Doctor</option>
+                 <option value="dr_sharma">Dr. A.K. Sharma (General)</option>
+  <option value="dr_mehta">Dr. R. Mehta (Panchakarma)</option>
+  <option value="dr_singh">Dr. P. Singh (Kayachikitsa)</option>
+  <option value="dr_gupta">Dr. S. Gupta (Shalakya Tantra)</option>
+  <option value="dr_verma">Dr. N. Verma (Prasuti & Stri Roga)</option>
+            </select>
+
+            <label>Preferred Date</label>
+            <input type="date">
+
+            <label>Preferred Time</label>
+            <input type="time">
+
+            <label>Appointment Type</label>
+            <select>
+                <option>Select Type</option>
+                 <option value="new">New Consultation</option>
+  <option value="followup">Follow-up</option>
+  <option value="therapy">Therapy Session</option>
+  <option value="emergency">Emergency</option>
+  <option value="online">Online / Teleconsultation</option>
+            </select>
+
+            <label>Describe Your Symptoms (Optional)</label>
+            <textarea placeholder="Briefly describe your symptoms or reason for visit"></textarea>
+
+            <button type="submit" class="btn">Book Appointment</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

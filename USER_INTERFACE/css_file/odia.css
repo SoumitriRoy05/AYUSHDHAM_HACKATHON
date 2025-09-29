@@ -1,0 +1,105 @@
+ :root {
+             --primary-color: #d9f0d0;   /* light leafy green */
+  --secondary-color: #95d5b2; /* fresh herbal green */
+  --accent-color: #52b788;    /* medium green */
+  --text-color: #1b4332;      /* dark forest green */
+  --card-color: #f1faee;      /* soft off-white with green hint */
+  --hover-color: #40916c;
+        }
+
+        * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+        body {
+            background-color: #fcfaf0;
+            color: var(--text-color);
+            background-image: url('https://images.unsplash.com/photo-1619333714782-0d8a2346c4a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(252, 250, 240, 0.85);
+            z-index: -1;
+        }
+        .container {display: flex; min-height: 100vh;}
+        .sidebar {
+            width: 250px;
+            background-color: var(--primary-color);
+            padding: 20px 0;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar-header {padding: 0 20px 20px; border-bottom: 1px solid var(--accent-color); display: flex; align-items: center;}
+        .logo {width: 40px; height: 40px; margin-right: 15px; border-radius: 50%; object-fit: cover;}
+        .sidebar-header h2 {color: var(--text-color); font-size: 1.5rem;}
+        .sidebar-menu {list-style: none; padding: 20px 0;}
+        .sidebar-menu li {padding: 12px 20px; transition: background-color 0.3s;}
+        .sidebar-menu li:hover {background-color: var(--secondary-color); cursor: pointer;}
+        .sidebar-menu li a {color: var(--text-color); text-decoration: none; display: flex; align-items: center;}
+        .sidebar-menu i {margin-right: 10px; width: 20px;}
+        .main-content {flex: 1; padding: 20px;}
+        .top-banner {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-image: url('https://images.unsplash.com/photo-1590596280519-5f77a7429305?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-banner::before {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(149, 213, 178, 0.85); border-radius: 8px; z-index: 0;}
+        .top-banner h1 {font-size: 1.8rem; position: relative; z-index: 1;}
+        .top-banner .user-info {position: relative; z-index: 1; display: flex; align-items: center;}
+        .top-banner .user-info i {margin-right: 8px;}
+        .doctors-section, .appointment-form-section {
+            background-color: var(--card-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {font-size: 1.3rem; margin-bottom: 15px; color: var(--text-color);}
+        .doctors-grid {display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;}
+        .doctor-card {background-color: var(--primary-color); border-radius: 8px; overflow: hidden; box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); transition: transform 0.3s, box-shadow 0.3s;}
+        .doctor-card:hover {transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);}
+        .doctor-image {width: 100%; height: 180px; object-fit: cover;}
+        .doctor-info {padding: 15px;}
+        .doctor-name {font-size: 1.1rem; font-weight: 600; margin-bottom: 5px; color: var(--text-color);}
+        .doctor-specialty {font-size: 0.9rem; color: #8d6e63; margin-bottom: 10px;}
+        .doctor-rating {display: flex; align-items: center; margin-bottom: 10px;}
+        .doctor-rating i {color: #52b788; margin-right: 5px;}
+        .book-appointment-btn {display: block; width: 100%; padding: 8px; background-color: var(--accent-color); color: var(--text-color); border: none; border-radius: 4px; font-weight: 500; cursor: pointer;}
+        .book-appointment-btn:hover {background-color: var(--hover-color);}
+        .form-grid {display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px;}
+        .form-group {margin-bottom: 15px;}
+        .form-group.full-width {grid-column: 1 / -1;}
+        .form-group label {display: block; margin-bottom: 5px; color: var(--text-color); font-weight: 500;}
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 10px; border: 1px solid var(--accent-color);
+            border-radius: 4px; background-color: var(--primary-color); color: var(--text-color);
+        }
+        .form-group textarea {resize: vertical; min-height: 100px;}
+        .submit-btn {padding: 12px 25px; background-color: var(--secondary-color); color: var(--text-color); border: none; border-radius: 4px; font-weight: 600; cursor: pointer;}
+        .submit-btn:hover {background-color: var(--hover-color);}
+        .navigation-buttons {display: flex; justify-content: space-between; margin-top: 30px;}
+        .nav-btn {padding: 10px 20px; background-color: var(--secondary-color); color: var(--text-color); border: none; border-radius: 4px; font-weight: 500; cursor: pointer; display: flex; align-items: center;}
+        .nav-btn i {margin-right: 8px;}
+        .nav-btn:hover {background-color: var(--hover-color);}
+        @media (max-width: 768px) {
+            .container {flex-direction: column;}
+            .sidebar {width: 100%; padding: 10px 0;}
+            .sidebar-menu {display: flex; overflow-x: auto; padding: 10px 0;}
+            .sidebar-menu li {padding: 10px 15px; white-space: nowrap;}
+            .form-grid {grid-template-columns: 1fr;}
+            .doctors-grid {grid-template-columns: 1fr;}
+        }

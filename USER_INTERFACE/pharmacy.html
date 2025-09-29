@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy - Ayurvedic Care</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css_file/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="./css_file/pharmacy.css">
+  <style>
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <img src="./LOGO_WP.jpg" alt="Ayurvedic Logo" class="logo">
+        <h2>AYUSHDHAM</h2>
+      </div>
+      <ul class="sidebar-menu">
+        
+        <li><a href="./index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="./appointment_page.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+        <li><a href="./treatment.html"><i class="fas fa-prescription-bottle-alt"></i> My Treatments</a></li>
+        <li><a href="./pharmacy.html"><i class="fas fa-pills"></i> Pharmacy</a></li>
+        <li><a href="./report.html"><i class="fas fa-chart-line"></i> Reports</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Top Banner -->
+      <div class="top-banner">
+        <h1>My Medications 💊</h1>
+        <div class="user-info">
+          <i class="fas fa-user-circle"></i>
+          <span id="username-display">Existing User</span>
+        </div>
+      </div>
+
+      <!-- Ongoing Medications -->
+      <div class="pharmacy-section">
+        <h2 class="section-title">Current Prescriptions</h2>
+
+        <div class="medication-card">
+          <div>
+            <h3>Ashwagandha Capsules</h3>
+            <p class="medication-detail"><strong>Dosage:</strong> 500mg, twice a day</p>
+            <p class="medication-detail"><strong>Start Date:</strong> 01 Sep 2025</p>
+            <p class="medication-detail"><strong>End Date:</strong> 30 Sep 2025</p>
+          </div>
+          <div>
+            <p class="medication-detail"><strong>Next Refill:</strong> 28 Sep 2025</p>
+          </div>
+        </div>
+
+        <div class="medication-card">
+          <div>
+            <h3>Triphala Powder</h3>
+            <p class="medication-detail"><strong>Dosage:</strong> 2 tsp before bed</p>
+            <p class="medication-detail"><strong>Start Date:</strong> 05 Sep 2025</p>
+            <p class="medication-detail"><strong>End Date:</strong> 05 Oct 2025</p>
+          </div>
+          <div>
+            <p class="medication-detail"><strong>Next Refill:</strong> 03 Oct 2025</p>
+          </div>
+        </div>
+
+        <div class="medication-card">
+          <div>
+            <h3>Chyawanprash</h3>
+            <p class="medication-detail"><strong>Dosage:</strong> 1 tbsp in morning</p>
+            <p class="medication-detail"><strong>Start Date:</strong> 01 Sep 2025</p>
+            <p class="medication-detail"><strong>End Date:</strong> 30 Sep 2025</p>
+          </div>
+          <div>
+            <p class="medication-detail"><strong>Next Refill:</strong> 28 Sep 2025</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medication Usage Graph -->
+      <div class="chart-container">
+        <h3>Medication Adherence 📈</h3>
+        <canvas id="pharmacyChart"></canvas>
+      </div>
+
+      <!-- Future Plans -->
+      <div class="pharmacy-section future-section">
+        <h3>Future Recommendations 🌿</h3>
+        <ul>
+          <li>Refill Ashwagandha Capsules for next month</li>
+          <li>Start seasonal herbal detox as per doctor’s advice</li>
+          <li>Monitor blood pressure weekly</li>
+          <li>Follow Ayurvedic diet plan strictly</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js_file/pharmacy.js">
+    
+  </script>
+</body>
+</html>

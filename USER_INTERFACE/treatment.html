@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Treatment Plan - Ayurvedic Care</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css_file/index.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+   
+  </style>
+  <link rel="stylesheet" href="./css_file/treatment.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <img src="./LOGO_WP.jpg" alt="Ayurvedic Logo" class="logo">
+        <h2>AYUSHDHAM</h2>
+      </div>
+      <ul class="sidebar-menu">
+        <!-- <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li> -->
+        <li><a href="./index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="./appointment_page.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+        <li><a href="./treatment.html"><i class="fas fa-prescription-bottle-alt"></i> My Treatments</a></li>
+        <li><a href="./report.html"><i class="fas fa-prescription-bottle-alt"></i> My Reports</a></li>
+        <li><a href="./pharmacy.html"><i class="fas fa-pills"></i> Pharmacy</a></li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Top Banner -->
+      <div class="top-banner">
+        <h1>My Ongoing Treatment Plan 🌿</h1>
+        <div class="user-info">
+          <i class="fas fa-user-circle"></i>
+          <span id="username-display">Existing User</span>
+        </div>
+      </div>
+
+      <!-- Patient Medical Details -->
+      <div class="treatment-section medical-section">
+        <h3>Patient Medical Details 🧾</h3>
+        <p><strong>Name:</strong> Rajesh Kumar</p>
+        <p><strong>Age:</strong> 42</p>
+        <p><strong>Condition:</strong> Chronic Back Pain</p>
+        <p><strong>Diagnosis:</strong> Vata Imbalance</p>
+      </div>
+
+      <!-- Ongoing Treatments Section -->
+      <div class="treatment-section">
+        <h2 class="section-title">Ongoing Treatments</h2>
+
+        <div class="treatment-card">
+          <h3>Panchakarma Therapy</h3>
+          <div class="detail"><strong>Doctor:</strong> Dr. Sharma</div>
+          <div class="detail"><strong>Duration:</strong> 14 Days (Started: 2nd Sept)</div>
+          <div class="detail"><strong>Sessions Completed:</strong> 7 / 14</div>
+          <div class="progress"><div class="progress-bar" style="width: 50%;"></div></div>
+        </div>
+
+        <div class="treatment-card">
+          <h3>Herbal Oil Massage</h3>
+          <div class="detail"><strong>Doctor:</strong> Dr. Verma</div>
+          <div class="detail"><strong>Duration:</strong> 10 Days (Started: 5th Sept)</div>
+          <div class="detail"><strong>Sessions Completed:</strong> 3 / 10</div>
+          <div class="progress"><div class="progress-bar" style="width: 30%;"></div></div>
+        </div>
+      </div>
+
+      <!-- Treatment Progress Graph -->
+      <div class="chart-container">
+        <h3>Treatment Progress 📊</h3>
+        <canvas id="treatmentChart"></canvas>
+      </div>
+
+      <!-- Daily Care Tips -->
+      <div class="treatment-section tips">
+        <h3>Daily Care Tips 🌱</h3>
+        <ul>
+          <li>Drink plenty of warm water during therapy.</li>
+          <li>Follow the prescribed Ayurvedic diet strictly.</li>
+          <li>Do light yoga and breathing exercises daily.</li>
+          <li>Avoid stress and maintain regular sleep.</li>
+        </ul>
+      </div>
+
+      <!-- Future Treatment Plans -->
+      <div class="treatment-section future-section">
+        <h3>Future Treatment Plans 🔮</h3>
+        <ul>
+          <li><strong>Yoga Therapy:</strong> Starting from 20th Sept (10 Days)</li>
+          <li><strong>Herbal Steam Bath:</strong> Scheduled after completion of current therapies</li>
+          <li><strong>Long-Term Ayurvedic Diet Plan:</strong> To be customized post-treatment</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js_file/treatment.js">
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYUSHDHAM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./css_file/index.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="./LOGO_WP.jpg" alt="Ayurvedic Logo" class="logo">
+                <h2>AYUSHDHAM</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="./index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="./appointment_page.html"><i class="fas fa-calendar-check"></i> Appointments</a></li>
+                <li><a href="./treatment.html"><i class="fas fa-prescription-bottle-alt"></i> Treatments</a></li>
+                <!-- <li><a href="./report.html"><i class="fas fa-file-medical"></i> Medical Records</a></li> -->
+                <li><a href="./pharmacy.html"><i class="fas fa-pills"></i> Pharmacy</a></li>
+                <li><a href="./report.html"><i class="fas fa-chart-line"></i> Reports</a></li>
+                <!-- <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li> -->
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Banner -->
+            <div class="top-banner">
+                <h1>Welcome to Ayurvedic Treatment Center</h1>
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span id="username-display">Existing User</span>
+                </div>
+            </div>
+
+            <!-- Data Cards -->
+            <div class="data-cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-users"></i></div>
+                    <div class="card-title">Patients</div>
+                    <div class="card-value">380</div>
+                    <div class="card-change">+40% this month</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="card-title">Appointments</div>
+                    <div class="card-value">60</div>
+                    <div class="card-change">+30%</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="card-title">Completed Therapies</div>
+                    <div class="card-value">142</div>
+                    <div class="card-change">+10%</div>
+                </div>
+            </div>
+
+            <!-- Departments Section -->
+            <div class="departments">
+                <h2 class="section-title">Departments</h2>
+                <div class="department-list">
+                    <div class="department-item">
+                        <i class="fas fa-heartbeat department-icon"></i>
+                        <span class="department-name">Kayachikitsa</span>
+                        <span class="department-count">9</span>
+                    </div>
+                    <div class="department-item">
+                        <i class="fas fa-eye department-icon"></i>
+                        <span class="department-name">Shalakya Tantra</span>
+                        <span class="department-count">5</span>
+                    </div>
+                    <div class="department-item">
+                        <i class="fas fa-cut department-icon"></i>
+                        <span class="department-name">Shalya Tantra</span>
+                        <span class="department-count">7</span>
+                    </div>
+                    <div class="department-item">
+                        <i class="fas fa-skull-crossbones department-icon"></i>
+                        <span class="department-name">Agada Tantra</span>
+                        <span class="department-count">4</span>
+                    </div>
+                    <div class="department-item">
+                        <i class="fas fa-baby department-icon"></i>
+                        <span class="department-name">Kaumarabhritya</span>
+                        <span class="department-count">6</span>
+                    </div>
+                    <div class="department-item">
+                        <i class="fas fa-female department-icon"></i>
+                        <span class="department-name">Prasuti Tantra</span>
+                        <span class="department-count">8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart Section -->
+            <div class="chart-section">
+                <h2 class="section-title">Patients by Age</h2>
+                <div class="chart-container">
+                    <canvas id="ageChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Image Gallery Section -->
+            <div class="image-gallery">
+                <h2 class="section-title">Our Facilities</h2>
+                <div class="gallery-images">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Treatment Room" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1619333714782-0d8a2346c4a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Herbal Garden" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1590596280519-5f77a7429305?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Meditation Room" class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Yoga Hall" class="gallery-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Service -->
+    <div class="customer-service">
+        <i class="fas fa-phone-alt"></i>
+        <span>+1 (555) 123-4567</span>
+    </div>
+
+    <script src="./js_file/index.js">
+       
+    </script>
+</body>
+</html>

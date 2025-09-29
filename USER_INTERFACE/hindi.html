@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>अपॉइंटमेंट और डॉक्टर - आयुर्वेदिक उपचार केंद्र</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #d9f0d0;
+            --secondary-color: #95d5b2;
+            --accent-color: #52b788;
+            --text-color: #1b4332;
+            --card-color: #f1faee;
+            --hover-color: #40916c;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body {
+            background-color: #fcfaf0;
+            color: var(--text-color);
+            background-image: url('https://images.unsplash.com/photo-1619333714782-0d8a2346c4a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(252, 250, 240, 0.85);
+            z-index: -1;
+        }
+
+        .container { display: flex; min-height: 100vh; }
+        .sidebar { width: 250px; background-color: var(--primary-color); padding: 20px 0; box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
+        .sidebar-header { padding: 0 20px 20px; border-bottom: 1px solid var(--accent-color); display: flex; align-items: center; }
+        .logo { width: 40px; height: 40px; margin-right: 15px; border-radius: 50%; object-fit: cover; }
+        .sidebar-header h2 { font-size: 1.4rem; color: var(--text-color); }
+
+        .sidebar-menu { list-style: none; padding: 20px 0; }
+        .sidebar-menu li { padding: 12px 20px; transition: background-color 0.3s; }
+        .sidebar-menu li:hover { background-color: var(--secondary-color); cursor: pointer; }
+        .sidebar-menu li a { color: var(--text-color); text-decoration: none; display: flex; align-items: center; }
+        .sidebar-menu i { margin-right: 10px; width: 20px; }
+
+        .main-content { flex: 1; padding: 20px; }
+
+        .top-banner {
+            background-color: var(--secondary-color);
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-banner h1 { font-size: 1.6rem; position: relative; }
+        .top-banner .user-info { display: flex; align-items: center; }
+
+        .appointment-form-section,
+        .doctors-section {
+            background: var(--card-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .section-title { font-size: 1.2rem; margin-bottom: 15px; }
+
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 20px; }
+        .form-group.full-width { grid-column: 1 / -1; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 10px; border: 1px solid var(--accent-color); border-radius: 4px; background: var(--primary-color);
+        }
+
+        .submit-btn, .book-appointment-btn, .nav-btn {
+            padding: 10px 20px;
+            background-color: var(--secondary-color);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        .submit-btn:hover, .book-appointment-btn:hover, .nav-btn:hover { background: var(--hover-color); color: white; }
+
+        .doctors-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(250px,1fr)); gap: 20px; }
+        .doctor-card { background: var(--primary-color); border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); overflow: hidden; }
+        .doctor-info { padding: 15px; }
+        .doctor-name { font-weight: 600; margin-bottom: 5px; }
+        .doctor-specialty { font-size: 0.9rem; margin-bottom: 8px; }
+        .doctor-rating { margin-bottom: 10px; color: #ffc107; }
+
+        .navigation-buttons { display: flex; justify-content: space-between; margin-top: 30px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1686d3f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" class="logo">
+            <h2>आयुर्वेदिक देखभाल</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> लॉगआउट</a></li>
+            <li><a href="./appointment_page_hi.html"><i class="fas fa-calendar-check"></i> अपॉइंटमेंट</a></li>
+            <li><a href="./index.html"><i class="fas fa-tachometer-alt"></i> डैशबोर्ड</a></li>
+            <li><a href="#"><i class="fas fa-user-md"></i> अस्पताल प्रशासन</a></li>
+            <li><a href="#"><i class="fas fa-users"></i> मरीज</a></li>
+            <li><a href="#"><i class="fas fa-prescription-bottle-alt"></i> उपचार</a></li>
+            <li><a href="#"><i class="fas fa-file-medical"></i> मेडिकल रिकॉर्ड</a></li>
+            <li><a href="#"><i class="fas fa-pills"></i> फार्मेसी</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> रिपोर्ट्स</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> सेटिंग्स</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="top-banner">
+            <h1>अपॉइंटमेंट बुक करें</h1>
+            <div class="user-info"><i class="fas fa-user-circle"></i> <span id="username-display">नया उपयोगकर्ता</span></div>
+        </div>
+
+        <!-- Appointment Form -->
+        <div class="appointment-form-section">
+            <h2 class="section-title">अपनी अपॉइंटमेंट शेड्यूल करें</h2>
+            <form id="appointmentForm">
+                <div class="form-grid">
+                    <div class="form-group"><label for="fullName">पूरा नाम</label><input type="text" id="fullName" required></div>
+                    <div class="form-group"><label for="email">ईमेल</label><input type="email" id="email" required></div>
+                    <div class="form-group"><label for="phone">फ़ोन नंबर</label><input type="tel" id="phone" required></div>
+                    <div class="form-group"><label for="department">विभाग</label>
+                        <select id="department" required>
+                            <option value="">विभाग चुनें</option>
+                            <option value="kayachikitsa">कायचिकित्सा</option>
+                            <option value="shalakya">शालाक्य तंत्र</option>
+                            <option value="shalya">शल्य तंत्र</option>
+                            <option value="agada">अगद तंत्र</option>
+                            <option value="kaumarabhritya">कौमारभृत्य</option>
+                            <option value="prasuti">प्रसूति तंत्र</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label for="doctor">डॉक्टर चुनें</label>
+                        <select id="doctor" required>
+                            <option value="">डॉक्टर चुनें</option>
+                            <option value="dr1">डॉ. अनन्या शर्मा</option>
+                            <option value="dr2">डॉ. राजेश पटेल</option>
+                            <option value="dr3">डॉ. प्रिया मेनन</option>
+                            <option value="dr4">डॉ. विक्रम सिंह</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label for="date">तारीख</label><input type="date" id="date" required></div>
+                    <div class="form-group"><label for="time">समय</label><input type="time" id="time" required></div>
+                    <div class="form-group"><label for="appointmentType">अपॉइंटमेंट प्रकार</label>
+                        <select id="appointmentType" required>
+                            <option value="">प्रकार चुनें</option>
+                            <option value="consultation">परामर्श</option>
+                            <option value="followup">फॉलो-अप</option>
+                            <option value="therapy">थेरेपी सत्र</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width"><label for="symptoms">लक्षण (वैकल्पिक)</label><textarea id="symptoms"></textarea></div>
+                </div>
+                <button type="submit" class="submit-btn">अपॉइंटमेंट बुक करें</button>
+            </form>
+        </div>
+
+        <!-- Doctors Section -->
+        <div class="doctors-section">
+            <h2 class="section-title">हमारे आयुर्वेदिक विशेषज्ञ</h2>
+            <div class="doctors-grid">
+                <div class="doctor-card"><img src="https://images.unsplash.com/photo-1612349317150-e413fbb598ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" class="doctor-image"><div class="doctor-info"><div class="doctor-name">डॉ. अनन्या शर्मा</div><div class="doctor-specialty">कायचिकित्सा विशेषज्ञ</div><div class="doctor-rating">⭐⭐⭐⭐☆ <span>4.5 (128 समीक्षाएँ)</span></div><button class="book-appointment-btn">अपॉइंटमेंट बुक करें</button></div></div>
+                <div class="doctor-card"><img src="https://images.unsplash.com/photo-1622253692010-333f2da6034d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" class="doctor-image"><div class="doctor-info"><div class="doctor-name">डॉ. राजेश पटेल</div><div class="doctor-specialty">शल्य तंत्र विशेषज्ञ</div><div class="doctor-rating">⭐⭐⭐⭐⭐ <span>5.0 (92 समीक्षाएँ)</span></div><button class="book-appointment-btn">अपॉइंटमेंट बुक करें</button></div></div>
+                <div class="doctor-card"><img src="https://images.unsplash.com/photo-1594849482771-4a589d2b1a58?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" class="doctor-image"><div class="doctor-info"><div class="doctor-name">डॉ. प्रिया मेनन</div><div class="doctor-specialty">प्रसूति तंत्र विशेषज्ञ</div><div class="doctor-rating">⭐⭐⭐⭐☆ <span>4.0 (76 समीक्षाएँ)</span></div><button class="book-appointment-btn">अपॉइंटमेंट बुक करें</button></div></div>
+                <div class="doctor-card"><img src="https://images.unsplash.com/photo-1618498082432-02d70745000a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" class="doctor-image"><div class="doctor-info"><div class="doctor-name">डॉ. विक्रम सिंह</div><div class="doctor-specialty">शालाक्य तंत्र विशेषज्ञ</div><div class="doctor-rating">⭐⭐⭐⭐⭐ <span>4.7 (110 समीक्षाएँ)</span></div><button class="book-appointment-btn">अपॉइंटमेंट बुक करें</button></div></div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <button class="nav-btn" onclick="goToDashboard()"><i class="fas fa-arrow-left"></i> डैशबोर्ड पर वापस जाएँ</button>
+            <button class="nav-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i> लॉगआउट</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

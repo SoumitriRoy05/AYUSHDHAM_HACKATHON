@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="or">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ନିୟୋଜନ ଓ ଡାକ୍ତରମାନେ - ଆୟୁର୍ବେଦିକ ଚିକିତ୍ସା କେନ୍ଦ୍ର</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css_file/odia.css">
+    <style>
+        /* ✅ Keeping your exact styles */
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1686d3f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80" alt="ଲୋଗୋ" class="logo">
+                <h2>ଆୟୁର୍ବେଦିକ ଚିକିତ୍ସା</h2>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> ଲଗ୍ ଆଉଟ୍</a></li>
+                <li><a href="./appointment_page.html"><i class="fas fa-calendar-check"></i> ନିୟୋଜନ</a></li>
+                <li><a href="./index.html"><i class="fas fa-tachometer-alt"></i> ଡ୍ୟାଶବୋର୍ଡ</a></li>
+                <li><a href="#"><i class="fas fa-user-md"></i> ହସ୍ପିଟାଲ୍ ପ୍ରଶାସନ</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> ରୋଗୀମାନେ</a></li>
+                <li><a href="#"><i class="fas fa-prescription-bottle-alt"></i> ଚିକିତ୍ସା</a></li>
+                <li><a href="#"><i class="fas fa-file-medical"></i> ଚିକିତ୍ସା ରେକର୍ଡ</a></li>
+                <li><a href="#"><i class="fas fa-pills"></i> ଔଷଧାଳୟ</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> ରିପୋର୍ଟ୍</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> ସେଟିଂସ୍</a></li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Banner -->
+            <div class="top-banner">
+                <h1>ନିୟୋଜନ ବୁକ୍ କରନ୍ତୁ</h1>
+                <div class="user-info">
+                    <i class="fas fa-user-circle"></i>
+                    <span id="username-display">ନୂତନ ବ୍ୟବହାରକାରୀ</span>
+                </div>
+            </div>
+
+            <!-- Appointment Form -->
+            <div class="appointment-form-section">
+                <h2 class="section-title">ଆପଣଙ୍କର ନିୟୋଜନ ଧାର୍ଯ୍ୟ କରନ୍ତୁ</h2>
+                <form id="appointmentForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullName">ପୂର୍ଣ୍ଣ ନାମ</label>
+                            <input type="text" id="fullName" placeholder="ଆପଣଙ୍କର ପୂର୍ଣ୍ଣ ନାମ ଲେଖନ୍ତୁ" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">ଇମେଲ୍</label>
+                            <input type="email" id="email" placeholder="ଆପଣଙ୍କର ଇମେଲ୍ ଲେଖନ୍ତୁ" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">ଫୋନ୍ ନମ୍ବର</label>
+                            <input type="tel" id="phone" placeholder="ଫୋନ୍ ନମ୍ବର ଦିଅନ୍ତୁ" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="department">ବିଭାଗ</label>
+                            <select id="department" required>
+                                <option value="">ବିଭାଗ ବାଛନ୍ତୁ</option>
+                                <option value="kayachikitsa">କାୟଚିକିତ୍ସା</option>
+                                <option value="shalakya">ଶଳାକ୍ୟ ତନ୍ତ୍ର</option>
+                                <option value="shalya">ଶଳ୍ୟ ତନ୍ତ୍ର</option>
+                                <option value="agada">ଅଗଦ ତନ୍ତ୍ର</option>
+                                <option value="kaumarabhritya">କୌମାରଭୃତ୍ୟ</option>
+                                <option value="prasuti">ପ୍ରସୁତି ତନ୍ତ୍ର</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="doctor">ଡାକ୍ତର ବାଛନ୍ତୁ</label>
+                            <select id="doctor" required>
+                                <option value="">ଡାକ୍ତର ବାଛନ୍ତୁ</option>
+                                <option value="dr1">ଡା. ଅନନ୍ୟା ଶର୍ମା</option>
+                                <option value="dr2">ଡା. ରାଜେଶ ପଟେଲ୍</option>
+                                <option value="dr3">ଡା. ପ୍ରିୟା ମେନନ୍</option>
+                                <option value="dr4">ଡା. ବିକ୍ରମ ସିଂହ</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">ପସନ୍ଦର ତାରିଖ</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">ପସନ୍ଦର ସମୟ</label>
+                            <input type="time" id="time" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentType">ନିୟୋଜନ ପ୍ରକାର</label>
+                            <select id="appointmentType" required>
+                                <option value="">ପ୍ରକାର ବାଛନ୍ତୁ</option>
+                                <option value="consultation">ପରାମର୍ଶ</option>
+                                <option value="followup">ଫଲୋ-ଅପ୍</option>
+                                <option value="therapy">ଥେରାପି ସେସନ୍</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="symptoms">ଲକ୍ଷଣ (ଇଚ୍ଛାନୁସାରେ)</label>
+                            <textarea id="symptoms" placeholder="ସଙ୍କ୍ଷିପ୍ତରେ ଆପଣଙ୍କର ସମସ୍ୟା ବର୍ଣ୍ଣନା କରନ୍ତୁ"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">ନିୟୋଜନ ବୁକ୍ କରନ୍ତୁ</button>
+                </form>
+            </div>
+
+            <!-- Doctors Section -->
+            <div class="doctors-section">
+                <h2 class="section-title">ଆମ ଆୟୁର୍ବେଦିକ ବିଶେଷଜ୍ଞମାନେ</h2>
+                <div class="doctors-grid">
+                    <!-- Doctor Cards (Translated) -->
+                    <div class="doctor-card">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413fbb598ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="ଡା. ଅନନ୍ୟା ଶର୍ମା" class="doctor-image">
+                        <div class="doctor-info">
+                            <div class="doctor-name">ଡା. ଅନନ୍ୟା ଶର୍ମା</div>
+                            <div class="doctor-specialty">କାୟଚିକିତ୍ସା ବିଶେଷଜ୍ଞ</div>
+                            <div class="doctor-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (128 ସମୀକ୍ଷା)</span>
+                            </div>
+                            <button class="book-appointment-btn">ନିୟୋଜନ କରନ୍ତୁ</button>
+                        </div>
+                    </div>
+                    <!-- Add other doctor cards similarly... -->

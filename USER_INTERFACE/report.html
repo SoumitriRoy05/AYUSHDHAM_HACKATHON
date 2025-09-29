@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Ongoing Treatment Plan 🌿</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --primary-color: #d9f0d0;   /* light leafy green */
+      --secondary-color: #95d5b2; /* fresh herbal green */
+      --accent-color: #52b788;    /* medium green */
+      --text-color: #1b4332;      /* dark forest green */
+      --card-color: #ffffff;      /* white cards */
+      --hover-color: #40916c;     /* deep green */
+      --shadow-color: rgba(0, 0, 0, 0.1); /* soft shadows */
+    }
+
+    /* General */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f1faee;
+      color: var(--text-color);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 220px;
+      background: linear-gradient(180deg, #2c7a3f, #1f5d2e);
+      color:white;
+      padding: 20px 10px;
+      box-shadow: 2px 0 6px var(--shadow-color);
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--text-color);
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    .sidebar li {
+      margin: 15px 0;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .sidebar li:hover {
+      color: var(--hover-color);
+    }
+
+    /* Main Content */
+    .main {
+      margin-left: 240px;
+      padding: 20px;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #3ca861, #2c7a3f);
+      padding: 15px 25px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px var(--shadow-color);
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .patient-id {
+      font-weight: bold;
+    }
+
+    /* Grid Layout */
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--card-color);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px var(--shadow-color);
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 5px;
+    }
+
+    /* Chart Box */
+    .chart-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Lists */
+    .list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .list li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>AYUSHDHAM</h2>
+    <ul>
+      <li>Dashboard</li>
+      <li>Daily Report</li>
+      <li>My Records</li>
+      <li>Treatments</li>
+      <li>Pharmacy</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <div class="header">
+      <h1>My Ongoing Treatment Plan 🌿</h1>
+      <span class="patient-id">ID: 123</span>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="section-grid">
+      <!-- Patient Details -->
+      <div class="card">
+        <h2>Patient Medical Details</h2>
+        <p><b>Name:</b> Rajesh Kumar</p>
+        <p><b>Age:</b> 42</p>
+        <p><b>Condition:</b> Chronic Back Pain</p>
+        <p><b>Diagnosis:</b> Vata Imbalance</p>
+      </div>
+
+      <!-- Chart -->
+      <div class="card chart-box">
+        <h2>Treatment Progress Overview</h2>
+        <canvas id="progressChart"></canvas>
+      </div>
+
+      <!-- Panchakarma Therapy -->
+      <div class="card">
+        <h2>Panchakarma Therapy</h2>
+        <p><b>Doctor:</b> Dr. Sharma</p>
+        <p><b>Duration:</b> 14 Days</p>
+        <p><b>Sessions Completed:</b> 7/14</p>
+      </div>
+
+      <!-- Herbal Oil Massage -->
+      <div class="card">
+        <h2>Herbal Oil Massage</h2>
+        <p><b>Doctor:</b> Dr. Verma</p>
+        <p><b>Duration:</b> 10 Days</p>
+        <p><b>Sessions Completed:</b> 3/10</p>
+      </div>
+
+      <!-- Daily Care Tips -->
+      <div class="card">
+        <h2>Daily Care Tips</h2>
+        <ul class="list">
+          <li>Drink plenty of warm water during therapy</li>
+          <li>Follow Ayurvedic diet strictly</li>
+          <li>Do light yoga & breathing</li>
+          <li>Avoid stress & maintain sleep cycle</li>
+        </ul>
+      </div>
+
+      <!-- Future Plans -->
+      <div class="card">
+        <h2>Future Treatment Plans</h2>
+        <ul class="list">
+          <li>Yoga Therapy (100 Days)</li>
+          <li>Herbal Steam Bath</li>
+          <li>Customized Ayurvedic Diet</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart Script -->
+  <script>
+    const ctx = document.getElementById('progressChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Panchakarma Therapy', 'Herbal Oil Massage'],
+        datasets: [
+          {
+            label: 'Sessions Completed',
+            data: [7, 3],
+            backgroundColor: '#52b788'
+          },
+          {
+            label: 'Total Sessions',
+            data: [14, 10],
+            backgroundColor: '#95d5b2'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'top' }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
